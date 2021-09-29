@@ -1,15 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Countdown :targetDate="nextDate()"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Countdown from './components/Countdown.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Countdown
+  },
+  methods: {
+    nextDate() {
+
+
+        let string = "2021-09-24 17:00:00";
+        let datum = new Date(string);
+        return datum;
+    }
   }
 }
 </script>
